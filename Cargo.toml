@@ -1,0 +1,30 @@
+[package]
+name = "uptime"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.98"
+license = "MIT"
+description = "Synt extension that shows how long a host has been up and how loaded it is"
+repository = "https://github.com/syntso/extension-uptime"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+synt-extension-api = { git = "https://github.com/syntso/extension-api", rev = "90db6c546fbbb04ea41a9f6be0b8b8b4653268a8" }
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+pedantic = { level = "warn", priority = -1 }
+unwrap_used = "warn"
+dbg_macro = "warn"
+todo = "warn"
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+must_use_candidate = "allow"
+unused_async_trait_impl = "allow"
