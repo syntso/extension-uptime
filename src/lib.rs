@@ -5,3 +5,4 @@ mod remote;
 mod report;
 mod up;
 mod uptime;
+mod view;
