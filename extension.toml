@@ -1,10 +1,20 @@
 id = "uptime"
 name = "Uptime"
-version = "0.1.0"
-api = "0.1"
+version = "0.2.0"
+api = "0.2"
 description = "Shows how long a host has been up and how loaded it is."
 repository = "https://github.com/syntso/extension-uptime"
 
 [capabilities]
 call = ["ssh.exec"]
 storage = false
+
+[[contributes.resource.menu]]
+title = "Check uptime and load"
+action = "uptime.check"
+kinds = ["host"]
+
+[[contributes.panel]]
+id = "uptime"
+title = "Uptime and load"
+view = "uptime"
