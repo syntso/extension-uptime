@@ -12,9 +12,10 @@
 
 An extension for [Synt](https://github.com/syntso/synt), built with the [extension API](https://github.com/syntso/extension-api).
 
-- **One action.** `uptime.check` on a host returns its up time and load averages as JSON.
+- **One action.** `uptime.check` on a host returns its up time and load averages as JSON. It sits on every host's context menu as "Check uptime and load".
+- **One view.** The panel "Uptime and load" shows the host's up time, the three load averages and a chart of them, with a button to check again. It is a native view, drawn by the app.
 - **Read only.** It runs `uptime` and `cat /proc/loadavg` through `ssh.exec`, the only core action it may call.
-- **Nothing kept.** No storage, no files, no network of its own.
+- **Nothing kept.** No storage, no files, no network of its own. It needs extension API 0.2.
 
 ```json
 {"up":{"text":"3 days, 4:05","seconds":273900},"load":{"one":0.08,"five":0.03,"fifteen":0.01}}
