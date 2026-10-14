@@ -173,9 +173,10 @@ dependencies = [
 
 [[package]]
 name = "synt-extension-api"
-version = "0.1.0"
-source = "git+https://github.com/syntso/extension-api?rev=90db6c546fbbb04ea41a9f6be0b8b8b4653268a8#90db6c546fbbb04ea41a9f6be0b8b8b4653268a8"
+version = "0.2.0"
+source = "git+https://github.com/syntso/extension-api?rev=1893f0c14685819bc243ea2f0bf4044c210c7dc1#1893f0c14685819bc243ea2f0bf4044c210c7dc1"
 dependencies = [
+ "serde_json",
  "thiserror",
  "wit-bindgen",
 ]
@@ -208,7 +209,7 @@ checksum = "a2c754d6c33795a1c324727428e5a7dedb5b06195f9890bdbcba760d3e246563"
 
 [[package]]
 name = "uptime"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "serde",
  "serde_json",
